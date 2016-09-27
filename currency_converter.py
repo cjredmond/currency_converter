@@ -35,45 +35,19 @@ class Money:
         return "{} {}".format(self.symbol, self.value)
 
     def __lt__(self, other):
-        if self.convert() < other.convert():
-            return True
-        else:
-            return False
+        return self.convert() < other.convert():
 
     def __le__(self, other):
-        if self.convert() <= other.convert():
-            return True
-        else:
-            return False
+        return self.convert() <= other.convert():
 
     def __eq__(self, other):
-        if self.convert() == other.convert():
-            return True
-        else:
-            return False
+        return self.convert() == other.convert():
 
     def __ne__(self, other):
-        if self.convert() != other.convert():
-            return True
-        else:
-            return False
+        return self.convert() != other.convert():
 
     def __gt__(self, other):
-        if self.convert() > other.convert():
-            return True
-        else:
-            return False
+        return self.convert() > other.convert():
 
     def __ge__(self, other):
-        if self.convert() >= other.convert():
-            return True
-        else:
-            return False
-
-
-
-print(Money("EUR", 1000) - Money("USD", 1))
-print(Money("BTC", 1000) + Money("JPY", 100101))
-print(Money("JPY", 1000) > Money("USD", 1))
-print(Money("JPY", 1000) <= Money("USD", 1))
-print(Money("JPY", 1000) != Money("USD", 1))
+        return self.convert() >= other.convert():
